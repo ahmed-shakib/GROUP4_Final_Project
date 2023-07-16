@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlightTracker.FlightTracker">
+
+    <TextView
+        android:id="@+id/FlightTrackerPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Welcome to Flight Tracker"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/airportCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Insert airport code"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/FlightTrackerPageTitle"
+        app:layout_constraintStart_toStartOf="@+id/FlightTrackerPageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/FlightTrackerPageTitle" />
+
+    <Button
+        android:id="@+id/flightSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Flight List"
+        app:layout_constraintEnd_toEndOf="@+id/airportCodeText"
+        app:layout_constraintStart_toStartOf="@+id/airportCodeText"
+        app:layout_constraintTop_toBottomOf="@+id/airportCodeText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flightSearchButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
